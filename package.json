@@ -1,4 +1,7 @@
 {
   "name": "andresdominguez-codemods",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
 }
