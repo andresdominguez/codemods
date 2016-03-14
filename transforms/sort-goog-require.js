@@ -13,8 +13,12 @@ function isGoogRequire(vd) {
     return false;
   }
 
+  if (!vd.declarations[0].init) {
+    return false;
+  }
+
   const callee = vd.declarations[0].init.callee;
-  if (!callee) {
+  if (!callee || !callee.object || !callee.object.name) {
     return false;
   }
 
